@@ -4,7 +4,6 @@ C:\Users\sprigoda\source\repos\SortedListDescending\bin\Debug\netcoreapp3.1\Sort
 C:\Users\sprigoda\source\repos\SortedListDescending\bin\Debug\netcoreapp3.1\SortedListDescending.runtimeconfig.dev.json
 C:\Users\sprigoda\source\repos\SortedListDescending\bin\Debug\netcoreapp3.1\SortedListDescending.dll
 C:\Users\sprigoda\source\repos\SortedListDescending\bin\Debug\netcoreapp3.1\SortedListDescending.pdb
-C:\Users\sprigoda\source\repos\SortedListDescending\obj\Debug\netcoreapp3.1\SortedListDescending.csproj.AssemblyReference.cache
 C:\Users\sprigoda\source\repos\SortedListDescending\obj\Debug\netcoreapp3.1\SortedListDescending.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\sprigoda\source\repos\SortedListDescending\obj\Debug\netcoreapp3.1\SortedListDescending.AssemblyInfoInputs.cache
 C:\Users\sprigoda\source\repos\SortedListDescending\obj\Debug\netcoreapp3.1\SortedListDescending.AssemblyInfo.cs
