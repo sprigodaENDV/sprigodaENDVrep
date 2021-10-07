@@ -140,14 +140,11 @@ namespace SortedListDescending
                 SortedList<Student, studentPropertyType> listAlreadySorted = (SortedList<Student, studentPropertyType>)list.
                                                                              Cast<SortedList<Student, studentPropertyType>>().
                                                                              OrderByDescending(x => x.Values);
-               
+              */ 
                 SortedList<Student, studentPropertyType> listAlreadySorted = (SortedList<Student, studentPropertyType>)list.
                                                                              Cast<SortedList<Student, studentPropertyType>>().
                                                                              OrderBy(x => x.Values);
-                */
-                SortedList<Student, studentPropertyType> listAlreadySorted = (SortedList<Student, studentPropertyType>)list.Cast<SortedList<Student, studentPropertyType>>().
-                                                                            OrderByDescending(x => x.Values);
-
+                
                 return listAlreadySorted;
             }
 

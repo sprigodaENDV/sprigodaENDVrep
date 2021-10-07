@@ -2,7 +2,7 @@
 
 namespace StoreCharactersFromFile
 {
-    class Program
+    class StoreCharactersFromFile
     {
         static void Main(string[] args)
         {
