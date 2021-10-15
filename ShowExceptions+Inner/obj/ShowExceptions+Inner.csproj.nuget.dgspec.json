@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sprigoda\\source\\repos\\ShowExceptions+Inner\\ShowExceptions+Inner.csproj": {}
+    "C:\\Users\\sprigoda\\OneDrive - ENDAVA\\Desktop\\Dep\\ShowExceptions+Inner\\ShowExceptions+Inner.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sprigoda\\source\\repos\\ShowExceptions+Inner\\ShowExceptions+Inner.csproj": {
+    "C:\\Users\\sprigoda\\OneDrive - ENDAVA\\Desktop\\Dep\\ShowExceptions+Inner\\ShowExceptions+Inner.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sprigoda\\source\\repos\\ShowExceptions+Inner\\ShowExceptions+Inner.csproj",
+        "projectUniqueName": "C:\\Users\\sprigoda\\OneDrive - ENDAVA\\Desktop\\Dep\\ShowExceptions+Inner\\ShowExceptions+Inner.csproj",
         "projectName": "ShowExceptions+Inner",
-        "projectPath": "C:\\Users\\sprigoda\\source\\repos\\ShowExceptions+Inner\\ShowExceptions+Inner.csproj",
+        "projectPath": "C:\\Users\\sprigoda\\OneDrive - ENDAVA\\Desktop\\Dep\\ShowExceptions+Inner\\ShowExceptions+Inner.csproj",
         "packagesPath": "C:\\Users\\sprigoda\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sprigoda\\source\\repos\\ShowExceptions+Inner\\obj\\",
+        "outputPath": "C:\\Users\\sprigoda\\OneDrive - ENDAVA\\Desktop\\Dep\\ShowExceptions+Inner\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sprigoda\\AppData\\Roaming\\NuGet\\NuGet.Config",
