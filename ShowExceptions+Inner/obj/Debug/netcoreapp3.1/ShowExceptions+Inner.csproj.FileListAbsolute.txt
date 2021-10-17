@@ -4,7 +4,6 @@ C:\Users\sprigoda\source\repos\ShowExceptions+Inner\bin\Debug\netcoreapp3.1\Show
 C:\Users\sprigoda\source\repos\ShowExceptions+Inner\bin\Debug\netcoreapp3.1\ShowExceptions+Inner.runtimeconfig.dev.json
 C:\Users\sprigoda\source\repos\ShowExceptions+Inner\bin\Debug\netcoreapp3.1\ShowExceptions+Inner.dll
 C:\Users\sprigoda\source\repos\ShowExceptions+Inner\bin\Debug\netcoreapp3.1\ShowExceptions+Inner.pdb
-C:\Users\sprigoda\source\repos\ShowExceptions+Inner\obj\Debug\netcoreapp3.1\ShowExceptions+Inner.csproj.AssemblyReference.cache
 C:\Users\sprigoda\source\repos\ShowExceptions+Inner\obj\Debug\netcoreapp3.1\ShowExceptions+Inner.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\sprigoda\source\repos\ShowExceptions+Inner\obj\Debug\netcoreapp3.1\ShowExceptions+Inner.AssemblyInfoInputs.cache
 C:\Users\sprigoda\source\repos\ShowExceptions+Inner\obj\Debug\netcoreapp3.1\ShowExceptions+Inner.AssemblyInfo.cs

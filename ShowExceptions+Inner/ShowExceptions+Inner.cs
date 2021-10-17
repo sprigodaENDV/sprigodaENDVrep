@@ -10,8 +10,11 @@ namespace ShowExceptions_Inner
         {
             Console.WriteLine(@"Please enter your adress for validation. 
                               In case you don't use conventional formatting, the program will be persistent in its enquiry");
-            AcceptEmail();
-            AcceptPhoneNumber();
+            //AcceptEmail();
+            //AcceptPhoneNumber();
+            //AcceptDateOfBirth();
+            AcceptZipCode();
+            //AcceptURL();
         }
 
 
@@ -26,12 +29,16 @@ namespace ShowExceptions_Inner
                     Console.WriteLine("Enter your e-mail  :");
                     string read = Console.ReadLine();
                     bool ifMatches = Regex.IsMatch(read, mask);
-                    if (ifMatches) { Console.WriteLine("Wow, you suceeded entering email"); }
-                    else { tryBool = false; }
+                    if (ifMatches) 
+                    { 
+                        Console.WriteLine("Wow, you suceeded entering email");
+                        tryBool = false;
+                    }
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex.InnerException.Message);
+                    Console.WriteLine(ex.InnerException.StackTrace);
                 }
                 finally 
                 {
@@ -54,12 +61,16 @@ namespace ShowExceptions_Inner
                     Console.WriteLine("Enter your Moldovian phone number  :");
                     string read = Console.ReadLine();
                     bool ifMatches = Regex.IsMatch(read, mask);
-                    if (ifMatches) { Console.WriteLine("Wow, you suceeded entering phone number"); }
-                    else { tryBool = false; }
+                    if (ifMatches) 
+                    { 
+                        Console.WriteLine("Wow, you suceeded entering phone number");
+                        tryBool = false;
+                    }
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex.InnerException.Message);
+                    Console.WriteLine(ex.InnerException.StackTrace);
                 }
                 finally
                 {
@@ -82,12 +93,16 @@ namespace ShowExceptions_Inner
                     Console.WriteLine("Enter your date of birth in DD.MM.YYYY format :");
                     string read = Console.ReadLine();
                     bool ifMatches = Regex.IsMatch(read, mask);
-                    if (ifMatches) { Console.WriteLine("Wow, you suceeded entering date of birth"); }
-                    else { tryBool = false; }
+                    if (ifMatches) 
+                    { 
+                        Console.WriteLine("Wow, you suceeded entering date of birth");
+                        tryBool = false;
+                    }
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex.InnerException.Message);
+                    Console.WriteLine(ex.InnerException.StackTrace);
                 }
                 finally
                 {
@@ -106,16 +121,20 @@ namespace ShowExceptions_Inner
             {
                 try
                 {
-                    string mask = @"\MD\-d{4}";
+                    string mask = @"MD\d{4}";
                     Console.WriteLine("Enter your zip code in MD-xxxx format :");
                     string read = Console.ReadLine();
                     bool ifMatches = Regex.IsMatch(read, mask);
-                    if (ifMatches) { Console.WriteLine("Wow, you suceeded entering date of birth"); }
-                    else { tryBool = false; }
+                    if (ifMatches)
+                    { 
+                        Console.WriteLine("Wow, you suceeded entering your zip code");
+                        tryBool = false;
+                    }
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex.InnerException.Message);
+                    Console.WriteLine(ex.InnerException.StackTrace);
                 }
                 finally
                 {
@@ -134,16 +153,20 @@ namespace ShowExceptions_Inner
             {
                 try
                 {
-                    string mask = @"\HTTPS\:\\\\\w+[a-zA-Z0-9]+\.[a-zA-Z0-9]+\\\w{2}";
+                    string mask = @"^http(s) ?://([\w-]+.)+[\w-]+(/[\w- ./?%&=])?$";
                     Console.WriteLine("Enter your web adress :");
                     string read = Console.ReadLine();
                     bool ifMatches = Regex.IsMatch(read, mask);
-                    if (ifMatches) { Console.WriteLine("Wow, you suceeded entering web adress"); }
-                    else { tryBool = false; }
+                    if (ifMatches) 
+                    { 
+                        Console.WriteLine("Wow, you suceeded entering web adress");
+                        tryBool = false;
+                    }
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex.InnerException.Message);
+                    Console.WriteLine(ex.InnerException.StackTrace);
                 }
                 finally
                 {

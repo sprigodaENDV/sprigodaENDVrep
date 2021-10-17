@@ -11,4 +11,3 @@ C:\Users\sprigoda\source\repos\SortedListDescending\obj\Debug\netcoreapp3.1\Sort
 C:\Users\sprigoda\source\repos\SortedListDescending\obj\Debug\netcoreapp3.1\SortedListDescending.dll
 C:\Users\sprigoda\source\repos\SortedListDescending\obj\Debug\netcoreapp3.1\SortedListDescending.pdb
 C:\Users\sprigoda\source\repos\SortedListDescending\obj\Debug\netcoreapp3.1\SortedListDescending.genruntimeconfig.cache
-C:\Users\sprigoda\source\repos\SortedListDescending\obj\Debug\netcoreapp3.1\SortedListDescending.csproj.AssemblyReference.cache

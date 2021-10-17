@@ -11,4 +11,3 @@ C:\Users\sprigoda\source\repos\TypeIdentifier\obj\Debug\netcoreapp3.1\TypeIdenti
 C:\Users\sprigoda\source\repos\TypeIdentifier\obj\Debug\netcoreapp3.1\TypeIdentifier.dll
 C:\Users\sprigoda\source\repos\TypeIdentifier\obj\Debug\netcoreapp3.1\TypeIdentifier.pdb
 C:\Users\sprigoda\source\repos\TypeIdentifier\obj\Debug\netcoreapp3.1\TypeIdentifier.genruntimeconfig.cache
-C:\Users\sprigoda\source\repos\TypeIdentifier\obj\Debug\netcoreapp3.1\TypeIdentifier.csproj.AssemblyReference.cache
