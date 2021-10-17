@@ -11,3 +11,4 @@ C:\Users\sprigoda\source\repos\ShowExceptions+Inner\obj\Debug\netcoreapp3.1\Show
 C:\Users\sprigoda\source\repos\ShowExceptions+Inner\obj\Debug\netcoreapp3.1\ShowExceptions+Inner.dll
 C:\Users\sprigoda\source\repos\ShowExceptions+Inner\obj\Debug\netcoreapp3.1\ShowExceptions+Inner.pdb
 C:\Users\sprigoda\source\repos\ShowExceptions+Inner\obj\Debug\netcoreapp3.1\ShowExceptions+Inner.genruntimeconfig.cache
+C:\Users\sprigoda\source\repos\ShowExceptions+Inner\obj\Debug\netcoreapp3.1\ShowExceptions+Inner.csproj.AssemblyReference.cache

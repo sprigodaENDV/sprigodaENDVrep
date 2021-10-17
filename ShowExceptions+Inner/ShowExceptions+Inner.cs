@@ -10,11 +10,11 @@ namespace ShowExceptions_Inner
         {
             Console.WriteLine(@"Please enter your adress for validation. 
                               In case you don't use conventional formatting, the program will be persistent in its enquiry");
-            //AcceptEmail();
-            //AcceptPhoneNumber();
-            //AcceptDateOfBirth();
+            AcceptEmail();
+            AcceptPhoneNumber();
+            AcceptDateOfBirth();
             AcceptZipCode();
-            //AcceptURL();
+            AcceptURL();
         }
 
 
