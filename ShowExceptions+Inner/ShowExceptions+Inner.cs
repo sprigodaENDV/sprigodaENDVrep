@@ -21,6 +21,7 @@ namespace ShowExceptions_Inner
         static void AcceptEmail()
         {
             bool tryBool = true;
+            bool ifMatches = false;
             while (tryBool)
             {
                 try
@@ -28,23 +29,28 @@ namespace ShowExceptions_Inner
                     string mask = @"^\w+[a-zA-Z0-9]+([-._][a-z0-9]+)*@([a-z0-9]+)\.\w{2,4}";
                     Console.WriteLine("Enter your e-mail  :");
                     string read = Console.ReadLine();
-                    bool ifMatches = Regex.IsMatch(read, mask);
-                    if (ifMatches) 
-                    { 
+                    ifMatches = Regex.IsMatch(read, mask);
+                    if (ifMatches)
+                    {
                         Console.WriteLine("Wow, you suceeded entering email");
-                        tryBool = false;
+                    }
+                    else
+                    {
+                        throw new Exception(" Entering email produced this:");
                     }
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex.InnerException.Message);
-                    Console.WriteLine(ex.InnerException.StackTrace);
+                    Console.WriteLine(ex.InnerException.StackTrace);                    
                 }
                 finally 
                 {
+                    
                     Console.WriteLine("Want to try to enter email again? Press Y then.");
                     ConsoleKeyInfo k = Console.ReadKey();                   
                     if (k.Key == ConsoleKey.Y) { tryBool = true; }
+                    else { tryBool = false; }
                 }
             }
         }
@@ -61,10 +67,13 @@ namespace ShowExceptions_Inner
                     Console.WriteLine("Enter your Moldovian phone number  :");
                     string read = Console.ReadLine();
                     bool ifMatches = Regex.IsMatch(read, mask);
-                    if (ifMatches) 
-                    { 
+                    if (ifMatches)
+                    {
                         Console.WriteLine("Wow, you suceeded entering phone number");
-                        tryBool = false;
+                    }
+                    else
+                    {
+                        throw new Exception(" Entering phone number produced this:");
                     }
                 }
                 catch (Exception ex)
@@ -77,6 +86,7 @@ namespace ShowExceptions_Inner
                     Console.WriteLine("Want to try to enter phone number again? Press Y then.");
                     ConsoleKeyInfo k = Console.ReadKey();
                     if (k.Key == ConsoleKey.Y) { tryBool = true; }
+                    else { tryBool = false; }
                 }
             }
         }
@@ -96,7 +106,10 @@ namespace ShowExceptions_Inner
                     if (ifMatches) 
                     { 
                         Console.WriteLine("Wow, you suceeded entering date of birth");
-                        tryBool = false;
+                    }
+                    else 
+                    {
+                        throw new Exception(" Entering date of birth produced this:");
                     }
                 }
                 catch (Exception ex)
@@ -109,6 +122,7 @@ namespace ShowExceptions_Inner
                     Console.WriteLine("Want to try to enter date of birth again? Press Y then.");
                     ConsoleKeyInfo k = Console.ReadKey();
                     if (k.Key == ConsoleKey.Y) { tryBool = true; }
+                    else { tryBool = false; }
                 }
             }
         }
@@ -126,9 +140,12 @@ namespace ShowExceptions_Inner
                     string read = Console.ReadLine();
                     bool ifMatches = Regex.IsMatch(read, mask);
                     if (ifMatches)
-                    { 
+                    {
                         Console.WriteLine("Wow, you suceeded entering your zip code");
-                        tryBool = false;
+                    }
+                    else 
+                    {
+                        throw new Exception(" Entering zip code produced this:");
                     }
                 }
                 catch (Exception ex)
@@ -141,6 +158,7 @@ namespace ShowExceptions_Inner
                     Console.WriteLine("Want to try to enter zip code again? Press Y then.");
                     ConsoleKeyInfo k = Console.ReadKey();
                     if (k.Key == ConsoleKey.Y) { tryBool = true; }
+                    else { tryBool = false; }
                 }
             }
         }
@@ -157,10 +175,13 @@ namespace ShowExceptions_Inner
                     Console.WriteLine("Enter your web adress :");
                     string read = Console.ReadLine();
                     bool ifMatches = Regex.IsMatch(read, mask);
-                    if (ifMatches) 
-                    { 
+                    if (ifMatches)
+                    {
                         Console.WriteLine("Wow, you suceeded entering web adress");
-                        tryBool = false;
+                    }
+                    else 
+                    {
+                        throw new Exception(" Entering web adress produced this:");
                     }
                 }
                 catch (Exception ex)
@@ -173,6 +194,7 @@ namespace ShowExceptions_Inner
                     Console.WriteLine("Want to try to enter your web adress again? Press Y then.");
                     ConsoleKeyInfo k = Console.ReadKey();
                     if (k.Key == ConsoleKey.Y) { tryBool = true; }
+                    else { tryBool = false; }
                 }
             }
         }
