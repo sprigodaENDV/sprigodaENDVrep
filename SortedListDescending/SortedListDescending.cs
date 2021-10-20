@@ -10,24 +10,24 @@ namespace SortedListDescending
         static void Main(string[] args)
         {
             List<Student> studentList = new List<Student>();
-            ConcreteOperationsOnSortedList newExample = new ConcreteOperationsOnSortedList();
+            SetOperations operations = new SetOperations();
 
             Console.WriteLine("Want to begin with demonstratively prepopulated list of students? Press P if Yes");
             ConsoleKeyInfo dKey = Console.ReadKey();
-            
+
             if (dKey.Key == ConsoleKey.P)
             {
-                studentList = new List<Student>();   Student stud;
-                stud = new Student();   stud.Add("Name", "Ivan");  stud.Add("Surname", "Susanin");  stud.Add("Age", 155);
-                stud = new Student(); stud.Add("Name", "Diego"); stud.Add("Surname", "Maradonchik"); stud.Add("Age", 78);
-                stud = new Student(); stud.Add("Name", "Vasea"); stud.Add("Surname", "Kolupanov"); stud.Add("Age", 22);
-                stud = new Student(); stud.Add("Name", "John"); stud.Add("Surname", "Doe2"); stud.Add("Age", 66);
+                studentList = new List<Student>(); Student stud;
+                stud = new Student(); stud.Name = "Ivan"; stud.Surname = "Susanin"; stud.Age = 155; studentList.Add(stud);
+                stud = new Student(); stud.Name = "Diego"; stud.Surname = "Maradonchik"; stud.Age = 78; studentList.Add(stud);
+                stud = new Student(); stud.Name = "Vasea"; stud.Surname = "Kolupanov"; stud.Age = 22; studentList.Add(stud);
+                stud = new Student(); stud.Name = "John"; stud.Surname = "Doe2"; stud.Age = 66; studentList.Add(stud);
 
                 Console.WriteLine("Wanna sort descending? Press N to sort by name, S by surname, and A by Age");
                 ConsoleKeyInfo rrKey = Console.ReadKey();
-                newExample.SortMembers(studentList, rrKey);
+                operations.SortMembers(studentList, rrKey);
             }
-            else 
+            else
             {
                 studentList = new List<Student>();
                 while (true)
@@ -36,136 +36,91 @@ namespace SortedListDescending
                     ConsoleKeyInfo rKey = Console.ReadKey();
                     if (rKey.Key == ConsoleKey.Y)
                     {
-                        newExample.AddMember(studentList);
+                        operations.AddMember(studentList);
                     }
-                    else 
+                    else
                     {
                         Console.WriteLine("Wanna sort descending? Press N to sort by name, S by surname, and A by Age");
                         ConsoleKeyInfo rrKey = Console.ReadKey();
-                        newExample.SortMembers(studentList, rrKey);
+                        operations.SortMembers(studentList, rrKey);
                     }
                 }
             }
         }
 
-        internal class ConcreteOperationsOnSortedList : AbstractOperationsOnSortedList
+        internal class SetOperations
         {
-            protected internal override void AddMember(List<Student> list)
-            {
-                base.AddMember(list); 
-            }
-
-            protected internal override void SortMembers(List<Student> list, ConsoleKeyInfo info)
-            {
-                base.SortMembers(list, info);
-            }
-
-            protected internal override void DemonstrateResults()
-            {
-                base.DemonstrateResults();
-            }
-        }
-
-        internal abstract class AbstractOperationsOnSortedList
-        {
-            protected internal virtual void  AddMember(List<Student> list)
+            public void AddMember(List<Student> list)
             {
                 Student novicheok = new Student();
                 Console.WriteLine("Enter name");
-                novicheok.Add("Name", Console.ReadLine());
+                novicheok.Name = Console.ReadLine();
                 Console.WriteLine("Enter surname");
-                novicheok.Add("Surname", Console.ReadLine());
+                novicheok.Surname = Console.ReadLine();
                 Console.WriteLine("Enter Age");
-                novicheok.Add("Age", (int)Console.Read()); Console.WriteLine();
+                novicheok.Age = Console.Read(); Console.WriteLine();
 
                 list.Add(novicheok);
             }
 
 
-            protected internal virtual void SortMembers(List<Student> list, ConsoleKeyInfo info)
+            public void SortMembers(List<Student> list, ConsoleKeyInfo info)
             {
                 switch (info.Key)
-                {
+                {/*
                     case ConsoleKey.N:
                         {
-                            this.DemonstrateSortedList<string>(
-                            this.SortListAlreadyCreated<string>(
-                            this.PopulateListToSort<string>(list, "Name")));
+                            PopulateList(list);
+                            SortList(list, "Name");
                             return;
                         }
                     case ConsoleKey.S:
                         {
-                            this.DemonstrateSortedList<string>(
-                            this.SortListAlreadyCreated<string>(
-                            this.PopulateListToSort<string>(list, "Surname")));
-                            return;
-                        }
+                            PopulateList(list);
+                            SortList(list, "Surname");
+                            return; 
+                        }  */
                     case ConsoleKey.A:
-                        {
-                            this.DemonstrateSortedList<int>(
-                            this.SortListAlreadyCreated<int>(
-                            this.PopulateListToSort<int>(list, "Age")));
+                        {                            
+                           
+                            StudentByAgeDescending comparer = new StudentByAgeDescending();
+                            SortedList<int, Student> students = new SortedList<int, Student>(comparer);
+                            foreach (var stud in list)
+                            {
+                                students.Add(stud.Age, stud);
+                            }
+
+
+                            Console.WriteLine("  " + "Students' Age" + "  " + "Students' Name" + "  " + "Students' Surname" + "  ");
+                            foreach (var stud in students)
+                            {
+                                Console.WriteLine("  " + stud.Key/* + "  " + stud.Value.Name + "  " + stud.Value.Surname + "  "*/);
+                            }
+                            Console.ReadLine();
+
                             return;
                         }
                 }
-            }
-
-
-
-            protected internal virtual void DemonstrateResults()
-            { 
-
-            }
-
-
-
-            private SortedList<Student, studentPropertyType> PopulateListToSort<studentPropertyType>(List<Student> list, string fieldName)
-            {
-                SortedList<Student, studentPropertyType> listToSort = new SortedList<Student, studentPropertyType>(); 
-                foreach (var stud in list)
-                {
-                    object field = null;
-                    bool ifGotValue = stud.TryGetValue(fieldName, out field);
-                    Type tip = field.GetType();
-                    listToSort.Add(stud, (studentPropertyType)field);
-                }
-                return listToSort;
-            }
-
-
-
-
-            private SortedList<Student, studentPropertyType> SortListAlreadyCreated<studentPropertyType>(SortedList<Student, studentPropertyType> list)
-            { /*
-                SortedList<Student, studentPropertyType> listAlreadySorted = (SortedList<Student, studentPropertyType>)list.
-                                                                             Cast<SortedList<Student, studentPropertyType>>().
-                                                                             OrderByDescending(x => x.Values);
-              */ 
-                SortedList<Student, studentPropertyType> listAlreadySorted = (SortedList<Student, studentPropertyType>)list.
-                                                                             Cast<SortedList<Student, studentPropertyType>>().
-                                                                             OrderBy(x => x.Values);
-                
-                return listAlreadySorted;
-            }
-
-
-            protected internal void DemonstrateSortedList<studentPropertyType>(SortedList<Student, studentPropertyType> list)
-            {
-                foreach(var stud in list.Keys)
-                {
-                    bool l = false;
-                    studentPropertyType value;
-                    l = list.TryGetValue(stud, out value);
-                    Console.Write(value);  Console.WriteLine(); Console.WriteLine("The end of program");
-                }
-            }
-
+            }            
         }
 
-        internal class Student : Dictionary<string, object>
+
+        internal class StudentByAgeDescending: IComparer<int>
         {
+
+            public int Compare(int studA_Age, int studB_Age)
+            {
+                return studB_Age.CompareTo(studA_Age);
+            }
         }
-        
+
+
+        public class Student
+        {
+            public int Age;
+            public string Name;
+            public string Surname;
+        }        
 
     }
 }
